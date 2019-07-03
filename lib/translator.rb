@@ -24,10 +24,10 @@ def get_japanese_emoticon(url, emoticon)
 end
 
 def get_english_meaning(path, emoticon)
-  emoticon_hash = load_library(path)
+  emoticon_hash = load_library(url)
   result = emoticon_hash["get_meaning"][emoticon]
   if result == nil
-    result = "Sorry, that emoticon was not found" 
+    result = "Sorry, that is not a known emoticon" 
   end
   result
 end
