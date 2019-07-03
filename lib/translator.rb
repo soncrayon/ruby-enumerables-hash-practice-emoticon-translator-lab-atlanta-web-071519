@@ -2,7 +2,6 @@ require 'yaml'
 
 def load_library(url)
   load_hash = YAML.load_file(url)
-  subject = data["Subject_list"]
   data.each { |s|
   item = s.last
   if item.keys.first =~ /Skill/
