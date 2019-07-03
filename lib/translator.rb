@@ -18,7 +18,7 @@ def get_japanese_emoticon(url, emoticon)
   emoticon_hash = load_library(url)
   result = emoticon_hash["get_emoticon"][emoticon]
   if result == nil
-    result = "Sorry, that emoticon was not found" 
+    result = "Sorry, that is not a known emoticon" 
   end
   return result
 end
