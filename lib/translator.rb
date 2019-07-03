@@ -23,7 +23,7 @@ def get_japanese_emoticon(url, emoticon)
   return result
 end
 
-def get_english_meaning(path, emoticon)
+def get_english_meaning(url, emoticon)
   emoticon_hash = load_library(url)
   result = emoticon_hash["get_meaning"][emoticon]
   if result == nil
