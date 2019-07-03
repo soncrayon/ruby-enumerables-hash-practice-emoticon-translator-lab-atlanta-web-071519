@@ -11,16 +11,16 @@ def load_library(url)
     emoticon_hash["get_emoticon"][emoticon_set.first] = emoticon_set.last
     emoticon_hash["get_meaning"][emoticon_set.last] = english_word
   }
-  emoticon_hash
+  return emoticon_hash
 end
 
-def get_japanese_emoticon(path, emoticon)
-  emoticon_hash = load_library(path)
+def get_japanese_emoticon(url, emoticon)
+  emoticon_hash = load_library(url)
   result = emoticon_hash["get_emoticon"][emoticon]
   if result == nil
     result = "Sorry, that emoticon was not found" 
   end
-  result
+  return result
 end
 
 def get_english_meaning
