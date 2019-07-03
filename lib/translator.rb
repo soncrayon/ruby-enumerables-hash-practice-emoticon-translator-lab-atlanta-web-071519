@@ -1,7 +1,8 @@
 require 'yaml'
 
 def load_library(url)
-  YAML.load_file(url)
+  load_hash = YAML.load_file(url)
+  load_hash[]
 end
 
 def get_japanese_emoticon
