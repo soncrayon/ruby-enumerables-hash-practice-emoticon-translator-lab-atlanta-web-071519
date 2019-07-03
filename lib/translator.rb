@@ -1,11 +1,17 @@
 require 'yaml'
 
 def load_library(url)
-  load_hash = YAML.load_file(url)
-  data.each { |array|
-  get_meaning = array[1] 
+  emoticons = YAML.load_file(url)
+  emoticon_hash = Hash.new
 
-}
+  emoticon_hash["get_emoticon"] = Hash.new
+  emoticon_hash["get_meaning"] = Hash.new
+
+  emoticons.each do |english_word, emoticon_set|
+    emoticon_hash["get_emoticon"][emoticon_set.first] = emoticon_set.last
+    emoticon_hash["get_meaning"][emoticon_set.last] = english_word
+  end
+  emoticon_hash
 end
 
 def get_japanese_emoticon
